@@ -1,4 +1,4 @@
-package fr.esiea.unique.binome.name.letter;
+package fr.esiea.binome.Mehrenberger_Sidoli.letter;
 
 import java.util.ArrayList;
 import java.util.List;
