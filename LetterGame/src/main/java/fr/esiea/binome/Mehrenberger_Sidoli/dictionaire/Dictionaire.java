@@ -1,9 +1,10 @@
-package fr.esiea.binome.Mehrenberger_Sidoli.dictionary;
+package fr.esiea.binome.Mehrenberger_Sidoli.dictionaire;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Scanner;
 
-public class Dictionary implements IDictionary {
+public class Dictionaire implements IDictionaire {
 		
 	private static Scanner scan;
 	private BufferedReader buffread;

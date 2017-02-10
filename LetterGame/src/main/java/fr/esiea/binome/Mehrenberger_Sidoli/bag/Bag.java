@@ -53,7 +53,7 @@ public class Bag {
 	}
 			
 	
-	public void shuffleListe(List<Letter> liste) {
+	public void melangeListe(List<Letter> liste) {
 		Collections.shuffle(liste);
 	}
 		
