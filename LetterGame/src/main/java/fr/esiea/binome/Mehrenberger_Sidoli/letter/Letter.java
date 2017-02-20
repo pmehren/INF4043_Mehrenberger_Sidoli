@@ -35,4 +35,27 @@ public class Letter {
 	public void setNbOccurences(int nbOccurences){
 		this.nbOccurences = nbOccurences;
 	}
+	
+	public void NoAccent(char valeur) { //Cas Particulier des accents et du trait d'union
+				switch(valeur) {
+				case 'à': 
+					this.valeur = 'a';
+					break;
+				case 'é': case 'è': case 'ê':
+					this.valeur = 'e';
+					break;
+				case 'î':
+					this.valeur = 'i';
+					break;
+				case 'ô':
+					this.valeur = 'o';
+					break;
+				case 'ù':
+					this.valeur = 'u';
+					break;
+				case '-':
+					this.valeur = ' ';
+					break;
+				}
+	}
 }

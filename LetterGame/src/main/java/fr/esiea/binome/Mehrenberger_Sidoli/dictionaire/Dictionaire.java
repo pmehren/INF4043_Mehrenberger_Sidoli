@@ -21,10 +21,9 @@ public class Dictionaire implements IDictionaire {
 			buffread = new BufferedReader(fileread);
 			String s;
 			String motDico = null;
-
-			while((s = buffread.readLine()) != null) {
-				
-				//Cas particulier des accents et trait d'union
+			
+			/*
+			//Cas particulier des accents et trait d'union
 				s.replace('à', 'a');
 				s.replace('â', 'a');
 				s.replace('é', 'e');
@@ -39,6 +38,9 @@ public class Dictionaire implements IDictionaire {
 				s.replace('ç', 'c');
 				s.replace('-', ' ');
 				
+			 */
+			
+			while((s = buffread.readLine()) != null) {
 				scan = new Scanner(s);
 				while (scan.hasNext()) {
 					motDico = scan.next().toLowerCase();

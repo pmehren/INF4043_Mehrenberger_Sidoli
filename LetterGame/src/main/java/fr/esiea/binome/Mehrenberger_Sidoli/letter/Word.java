@@ -19,7 +19,7 @@ public class Word {
 		this.mot = mot;
 	}
 	
-	public boolean motEstBon(String mot, List<Character> listPotCommun){
+	public boolean lettreInPot(String mot, List<Character> listPotCommun){
 		boolean réelmot = false;
 		List<Character> list = new ArrayList<>();
 		
@@ -33,11 +33,11 @@ public class Word {
 					réelmot = true;
 				} else continue;
 			} if(réelmot == false){
-				System.out.println("La lettre " + list.get(i) + " n'existe pas");
+				System.out.println("La lettre " + list.get(i) + " ne se trouve pas dans le pot");
 				return false;	
 			}else réelmot = false;
 		}
-		System.out.println("Les lettres existent");;
+		System.out.println("Toutes les lettres utilisés sont dans le pot");;
 		return true;
 	}
 }

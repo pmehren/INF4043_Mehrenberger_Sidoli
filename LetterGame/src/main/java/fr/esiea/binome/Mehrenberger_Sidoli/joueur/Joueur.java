@@ -2,7 +2,7 @@ package fr.esiea.binome.Mehrenberger_Sidoli.joueur;
 
 import java.util.ArrayList;
 import java.util.List;
-import fr.esiea.binome.Mehrenberger_Sidoli.letter.Word;
+import fr.esiea.unique.binome.name.letter.Word;
 
 public class Joueur {
 	
@@ -22,6 +22,7 @@ public class Joueur {
 		this.nbMots = nbMots;
 	}
 	
+	////////////////VOL DES MOTS A FAIRE//////////////////////////
 	//Décrémenter le nombre de mots
 	public void reduce1NbMots(int nbMots){
 		if(nbMots > 0){
@@ -46,12 +47,13 @@ public class Joueur {
 			}
 		}
 	}
-
+	
 	public void addListeMots(List<Word> listeMots, Word mot){
 		if(this.listeMots.add(mot)){
 			add1NbMots(getNbMots());
 		}
 	}
+	
 	
 	public List<Word> getListeMots() {
 		return listeMots;

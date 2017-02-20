@@ -1,7 +1,7 @@
 package fr.esiea.binome.Mehrenberger_Sidoli.potcommun;
 
 import java.util.ArrayList;
-import java.util.Collections;
+//import java.util.Collections;
 import java.util.List;
 
 import fr.esiea.binome.Mehrenberger_Sidoli.letter.Letter;
