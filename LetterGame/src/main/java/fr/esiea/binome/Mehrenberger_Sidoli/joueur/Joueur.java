@@ -2,16 +2,24 @@ package fr.esiea.binome.Mehrenberger_Sidoli.joueur;
 
 import java.util.ArrayList;
 import java.util.List;
-import fr.esiea.unique.binome.name.letter.Word;
+import fr.esiea.binome.Mehrenberger_Sidoli.letter.Word;
 
 public class Joueur {
 	
-	private int nbMots;
-	private List<Word> listeMots = new ArrayList<>();
+private int nbMots;
+private List<Word> listeMots = new ArrayList<>();
 	
-	public Joueur(List<Word> listeMots) {
+	public Joueur() {
 		this.setNbMots(0);
-		this.setListeMots(listeMots);
+		this.setListeMots(new ArrayList());
+	}
+	
+	public List<Word> getListeMots() {
+		return listeMots;
+	}
+	
+	public void setListeMots (List<Word> listeMots){
+		this.listeMots = listeMots;		
 	}
 	
 	public int getNbMots() {
@@ -22,14 +30,56 @@ public class Joueur {
 		this.nbMots = nbMots;
 	}
 	
-	////////////////VOL DES MOTS A FAIRE//////////////////////////
+////////////////VOL DES MOTS A FAIRE//////////////////////////
+//Création d'un tableau de mots caché (tout les mots validés) maximum 19mots
+/*
+
+
+public static int AutorisationDuMot(String word) { //Vérifie si le mot a déjà été utilisé
+	boolean bool;
+	int flag=0;
+	try {
+		for(int i=0;i<superTab.length;i++) {	
+			if(superTab[i] != null ) {
+				bool = word.contains(superTab[i]);
+				if(bool == true) {
+					flag=1;
+					break;
+				}
+			}
+		}
+	}
+	catch (Exception e) {
+		System.out.println(e.toString());
+	}	
+	return flag;
+}
+	
+public static void RemplirSuperTab(String mot) { 
+		
+	int i;
+	int flag =0;
+	try {
+		for(i=0; i < superTab.length; i++) {
+			if(superTab[i] == null && flag == 0) {
+				superTab[i] = mot;
+				flag = 1;	
+			}
+		}
+	}
+	catch (Exception e) {
+		System.out.println(e.toString());
+	}	
+}
+*/
+
 	//Décrémenter le nombre de mots
 	public void reduce1NbMots(int nbMots){
 		if(nbMots > 0){
 			this.nbMots = nbMots - 1;
 		}else{
 			this.nbMots = nbMots;
-		}
+		}	
 	}
 	
 	//Incrémenter le nombre de mots
@@ -53,14 +103,4 @@ public class Joueur {
 			add1NbMots(getNbMots());
 		}
 	}
-	
-	
-	public List<Word> getListeMots() {
-		return listeMots;
-	}
-	
-	public void setListeMots(List<Word> listeMots) {
-		this.listeMots =listeMots;
-	}
-
 }

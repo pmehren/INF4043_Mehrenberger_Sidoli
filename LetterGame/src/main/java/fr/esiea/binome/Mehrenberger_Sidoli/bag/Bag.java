@@ -13,6 +13,14 @@ public class Bag {
 		this.setListe(liste);
 	}
 	
+	public List<Letter> getListe() {
+		return liste;
+	}
+		
+	public void setListe(List<Letter> liste) {
+		this.liste = liste;
+	}
+	
 	public Letter getPremiereLettre(List<Letter> liste) {
 		return liste.get(0);
 	}
@@ -21,12 +29,13 @@ public class Bag {
 		return liste.get(1);
 	}
 	
-	public void initListeBag(List<Letter> liste){
+	public void initListeBag(List<Letter> liste){ //Permet de réguler l'apparition des voyelles et consonnes
 		for(int i=0; i<26; i++) {
 			if(i == 0 || i == 4 || i == 8 || i == 14 || i == 20 || i == 24) //Si c'est une voyelle
 			{
 				for(int j=0; j<3; j++) {
-					Letter l = new Letter((char)(i+97), i, 4); //+97 correspond à l'alphabet (minuscules) en table ascii
+					Letter l = new Letter((char)(i+97), i, 3); //+97 correspond à l'alphabet (minuscules) en table ascii.
+					//On initialise le nbOccurence des voyelles à 4 afin qu'il y est 4fois plus de voyelles que de consonnes.
 					liste.add(l);
 				}
 			}
@@ -34,15 +43,7 @@ public class Bag {
 			liste.add(l);
 		}
 	}
-	
-	public int getTailleBag(List<Letter> liste) {
-		return liste.size();
-	}
-			
-	public Letter getLetterBag(List<Letter> liste, int index) {
-		return liste.get(index);
-	}
-	
+		
 	public List<Character> getBagListe(List<Letter> liste) {
 				List<Character> valeurListe = new ArrayList<>();
 				
@@ -51,17 +52,11 @@ public class Bag {
 				}	
 			return valeurListe;	
 	}
+	
+	
 			
 	
-	public void melangeListe(List<Letter> liste) {
+	public void melangeListe(List<Letter> liste) { //Permet de mélanger la liste de façon aléatoire
 		Collections.shuffle(liste);
-	}
-		
-	public List<Letter> getListe() {
-		return liste;
-	}
-		
-	public void setListe(List<Letter> liste) {
-		this.liste = liste;
 	}
 }

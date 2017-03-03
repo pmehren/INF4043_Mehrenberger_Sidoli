@@ -19,7 +19,7 @@ public class Word {
 		this.mot = mot;
 	}
 	
-	public boolean lettreInPot(String mot, List<Character> listPotCommun){
+	public boolean lettreInPot(String mot, List<Character> listPotCommun){ //Permet de vérifier si les lettres utilisés sont bien dans le pot commun
 		boolean réelmot = false;
 		List<Character> list = new ArrayList<>();
 		

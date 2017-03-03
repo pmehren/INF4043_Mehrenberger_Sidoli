@@ -34,32 +34,25 @@ private List<Letter> liste = new ArrayList<>();
 				
 		return listeValeur;
 	}
-		
-	public boolean supLettreDuPot(List<Letter> liste, char lettre) {
-		for(int i=0; i<liste.size(); i++) {
-			if(liste.get(i).getValeur() == lettre) {
-				liste.remove(i);
-				System.out.println("Lettre supprimée du pot commun");
-				return true;
-			}
-		}
-		System.out.println("La lettre n'existe pas dans le pot commun");
-		return false;
-	}
 			
-	public boolean supLettreDuPotWord(List<Letter> liste, String mot) {	
+	public boolean supLettreDuPotWord(List<Letter> liste, String mot) {	//Permet de récapituler les lettres enlevés du pot lorsqu'un mot est validé
 				List<Character> listeCharWord = new ArrayList<>();
 				for(char c : mot.toCharArray()) {
 					listeCharWord.add(c);
 				}
 				
 				for(int i=0; i<listeCharWord.size(); i++) {
-					for(int j=0; j<liste.size(); j++) {
-						if(liste.get(j).getValeur() == listeCharWord.get(i)) {
-							liste.remove(j);
-							System.out.println("Lettre supprimée du pot commun");
+					la:
+					{
+						for(int j=0; j<liste.size(); j++) {
+							if(liste.get(j).getValeur() == listeCharWord.get(i)) {
+								System.out.println("La lettre " + liste.get(j).getValeur() + " est supprimée du pot commun");
+									liste.remove(j);
+									break la;
+							}
 						}
 					}
+					
 				}
 	return true;
 	}
