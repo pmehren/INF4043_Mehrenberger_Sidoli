@@ -2,7 +2,6 @@ package fr.esiea.binome.Mehrenberger_Sidoli.joueur;
 
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
 import fr.esiea.binome.Mehrenberger_Sidoli.letter.Word;
 
 public class Joueur {
@@ -21,18 +20,6 @@ private List<Word> listeMots = new ArrayList<>();
 	
 	public void setListeMots (List<Word> listeMots){
 		this.listeMots = listeMots;		
-=======
-import fr.esiea.unique.binome.name.letter.Word;
-
-public class Joueur {
-	
-	private int nbMots;
-	private List<Word> listeMots = new ArrayList<>();
-	
-	public Joueur(List<Word> listeMots) {
-		this.setNbMots(0);
-		this.setListeMots(listeMots);
->>>>>>> 983f5c274c2ad13192fccf87a066f2cdff01cf7b
 	}
 	
 	public int getNbMots() {
@@ -43,7 +30,6 @@ public class Joueur {
 		this.nbMots = nbMots;
 	}
 	
-<<<<<<< HEAD
 ////////////////VOL DES MOTS A FAIRE//////////////////////////
 //Création d'un tableau de mots caché (tout les mots validés) maximum 19mots
 /*
@@ -86,23 +72,16 @@ public static void RemplirSuperTab(String mot) {
 	}	
 }
 */
-
-=======
-	////////////////VOL DES MOTS A FAIRE//////////////////////////
->>>>>>> 983f5c274c2ad13192fccf87a066f2cdff01cf7b
+	
 	//Décrémenter le nombre de mots
 	public void reduce1NbMots(int nbMots){
 		if(nbMots > 0){
 			this.nbMots = nbMots - 1;
 		}else{
 			this.nbMots = nbMots;
-<<<<<<< HEAD
 		}	
-=======
-		}
->>>>>>> 983f5c274c2ad13192fccf87a066f2cdff01cf7b
 	}
-	
+
 	//Incrémenter le nombre de mots
 	public void add1NbMots(int nbMots){
 		this.nbMots = nbMots + 1;
@@ -124,17 +103,5 @@ public static void RemplirSuperTab(String mot) {
 			add1NbMots(getNbMots());
 		}
 	}
-<<<<<<< HEAD
-=======
 	
-	
-	public List<Word> getListeMots() {
-		return listeMots;
-	}
-	
-	public void setListeMots(List<Word> listeMots) {
-		this.listeMots =listeMots;
-	}
-
->>>>>>> 983f5c274c2ad13192fccf87a066f2cdff01cf7b
 }
