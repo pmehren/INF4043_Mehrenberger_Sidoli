@@ -7,11 +7,25 @@
   <version>0.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>your binome name : Letter Game</name>
+  <name>Mehrenberger_Sidoli : Letter Game</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+    <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
   <dependencies>
     <dependency>
