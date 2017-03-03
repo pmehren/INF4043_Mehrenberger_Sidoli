@@ -19,7 +19,11 @@ public class Word {
 		this.mot = mot;
 	}
 	
+<<<<<<< HEAD
 	public boolean lettreInPot(String mot, List<Character> listPotCommun){ //Permet de vérifier si les lettres utilisés sont bien dans le pot commun
+=======
+	public boolean lettreInPot(String mot, List<Character> listPotCommun){
+>>>>>>> 983f5c274c2ad13192fccf87a066f2cdff01cf7b
 		boolean réelmot = false;
 		List<Character> list = new ArrayList<>();
 		
@@ -40,4 +44,8 @@ public class Word {
 		System.out.println("Toutes les lettres utilisés sont dans le pot");;
 		return true;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 983f5c274c2ad13192fccf87a066f2cdff01cf7b
