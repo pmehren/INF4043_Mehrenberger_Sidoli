@@ -4,7 +4,7 @@ package fr.esiea.binome.Mehrenberger_Sidoli.app;
 //import java.util.List;
 //import fr.esiea.unique.binome.name.bag.SmartBag;
 import fr.esiea.binome.Mehrenberger_Sidoli.lettergameengine.LetterGameEngine;
-
+import fr.esiea.binome.Mehrenberger_Sidoli.IA;
 
 public class App{
 	public static void main( String[] args ){
