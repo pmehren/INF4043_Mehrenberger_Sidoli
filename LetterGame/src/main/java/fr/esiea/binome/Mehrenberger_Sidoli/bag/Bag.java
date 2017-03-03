@@ -64,13 +64,6 @@ public class Bag {
 	
 	public void melangeListe(List<Letter> liste) { //Permet de mélanger la liste de façon aléatoire
 		Collections.shuffle(liste);
-	}
-			
-	public List<Letter> getListe() {
-		return liste;
-	}
-		
-	public void setListe(List<Letter> liste) {
-		this.liste = liste;
-	}
+	}														public void setListe(List<Letter> liste) {
+															this.liste = liste													}
 }
